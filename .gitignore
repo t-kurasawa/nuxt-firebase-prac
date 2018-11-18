@@ -9,3 +9,24 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# firebase-tools
+/.vscode
+/coverage
+/.nyc_output
+firebase-debug.log
+.npmrc
+.DS_Store
+.idea
+*.iml
+*.tgz
+scripts/*.json
+lib/
+
+# firebase
+.firebaserc
+database.rules.json
+firebase.json
+firestore.indexes.json
+firestore.rules
+storage.rules
