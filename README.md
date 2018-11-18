@@ -60,3 +60,5 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 ``` bash
 $ firebase deploy
 ```
+
+- 次はここから https://www.non-standardworld.co.jp/nuxt-js-firebase/20646/
