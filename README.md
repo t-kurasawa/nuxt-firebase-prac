@@ -29,6 +29,7 @@ $ vi .gitignore
 > firestore.indexes.json
 > firestore.rules
 > storage.rules
+> firebase.config.js
 ```
 and add ignore files for the project.
 

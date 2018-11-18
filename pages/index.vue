@@ -6,28 +6,51 @@
         nuxt-firebase-prac
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        This is Nuxt.js with Firebase practice.
       </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+        <Home v-if="!isLogin"></Home>
+        <Mypage v-if="isLogin" :user="userData"></Mypage>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import firebase from '@/plugins/firebase.config'
 import AppLogo from '~/components/AppLogo.vue'
+import Home from '~/components/Home.vue'
+import Mypage from '~/components/Mypage.vue'
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    Home,
+    Mypage    
+  },
+  asyncData (context) {
+    // asyncData is called every time before loading the component
+    return { name: 'Hello, World！！', isLogin:false, userData:null}
+  },
+  fetch () {
+    // The `fetch` method is used to fill the store before rendering the page
+  },
+  mounted: function() {
+    firebase.auth().onAuthStateChanged(user => {
+      console.log(user);
+      if (user) {
+        this.isLogin = true;
+        this.userData = user;
+      } else {
+        this.isLogin = false;
+        this.userData = null;
+      };
+    });
+  },
+  methods: {
+    googleLogin: function() {
+      firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+    }
   }
 }
 </script>

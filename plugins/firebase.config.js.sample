@@ -1,0 +1,14 @@
+import firebase from 'firebase'
+
+if (!firebase.apps.length) {
+  firebase.initializeApp({
+    apiKey: "<apiKey>",
+    authDomain: "<authDomain>.firebaseapp.com",
+    databaseURL: "https://<databaseURL>.firebaseio.com",
+    projectId: "<projectId>",
+    storageBucket: "<storageBucket>.appspot.com",
+    messagingSenderId: "<messagingSenderId>"
+  })
+}
+
+export default firebase
