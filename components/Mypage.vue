@@ -91,6 +91,7 @@
         </div>
       </div>
     </div>
+    <a class="button is-danger is-rounded" @click="logout">Logout</a>
   </div>
 </template>
 
