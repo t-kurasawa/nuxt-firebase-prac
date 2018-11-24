@@ -1,5 +1,7 @@
 <template>
-    <a class="button is-info is-rounded" @click="googleLogin">Login with Google</a>
+    <a class="button is-info" @click="googleLogin">
+      Login with Google
+    </a>
 </template>
 
 <script>

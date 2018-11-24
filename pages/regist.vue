@@ -10,7 +10,7 @@
       </h2>
       <div class="links">
         <Home v-if="!isLogin"></Home>
-        <Mypage v-if="isLogin"></Mypage>
+        <Myform v-if="isLogin"></Myform>
       </div>
     </div>
   </section>
@@ -20,13 +20,13 @@
 import firebase from '@/plugins/firebase.config'
 import AppLogo from '~/components/AppLogo.vue'
 import Home from '~/components/Home.vue'
-import Mypage from '~/components/Mypage.vue'
+import Myform from '~/components/Myform.vue'
 
 export default {
   components: {
     AppLogo,
     Home,
-    Mypage    
+    Myform
   },
   asyncData (context) {
     // asyncData is called every time before loading the component
@@ -47,9 +47,6 @@ export default {
     });
   },
   methods: {
-    googleLogin: function() {
-      firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider());
-    }
   }
 }
 </script>
