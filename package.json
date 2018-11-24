@@ -2,7 +2,7 @@
   "name": "nuxt-firebase-prac",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "t-kurasawa <>",
+  "author": "t-kurasawa",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -17,6 +17,8 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxtjs/bulma": "^1.2.1",
+    "@nuxtjs/font-awesome": "^1.0.3",
     "babel-eslint": "^10.0.1",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",

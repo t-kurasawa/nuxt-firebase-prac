@@ -50,7 +50,7 @@ $ npm run dev
 $ npm run build
 $ npm start
 
-# cf. generate static project
+# generate static project
 $ npm run generate
 ```
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
@@ -61,4 +61,8 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 $ firebase deploy
 ```
 
-- 次はここから https://www.non-standardworld.co.jp/nuxt-js-firebase/20646/
+## Design
+``` bash
+# use bulma
+$ npm install --save-dev @nuxtjs/bulma @nuxtjs/font-awesome
+```
